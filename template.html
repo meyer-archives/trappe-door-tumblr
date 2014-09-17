@@ -1,0 +1,217 @@
+<!doctype html>
+<!--[if lt IE 7 ]>	<html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>		<html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>		<html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>		<html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>{Title}</title>
+		<link rel="shortcut icon" href="{Favicon}">
+		<link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+{block:Description}
+		<meta name="description" content="{MetaDescription}" />
+{/block:Description}
+
+		<link rel="stylesheet" href="style.css" media="screen">
+
+		<script src="http://static.tumblr.com/ci1hxwf/hYtlb1wg4/modernizr-1.6.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<!--[if lt IE 7 ]>
+		<script src="http://static.tumblr.com/ci1hxwf/soTlb1wkn/dd_belatedpng.js"></script>
+		<script> DD_belatedPNG.fix('img, .png_bg'); </script>
+		<![endif]-->
+
+		<style media="screen">
+			@font-face {
+				font-family: 'DejaVuSerifCondensed';
+				src: url('http://static.tumblr.com/ci1hxwf/7nYlb1h0f/dejavuserifcondensed-webfont.eot');
+				src: local('☺'),
+				url('http://static.tumblr.com/ci1hxwf/UYclb1h1c/dejavuserifcondensed-webfont.woff') format('woff'),
+				url('http://static.tumblr.com/ci1hxwf/imElb1h12/dejavuserifcondensed-webfont.ttf') format('truetype'),
+				url('http://static.tumblr.com/ci1hxwf/zXWlb1h0q/dejavuserifcondensed-webfont.svg#webfontlqoFimKm') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+		<div id="header">
+			<h1><a id="logo" href="#">The Trappe Door</a></h1>
+{block:Description}
+			<div class="description">
+				<p>{Description}</p>
+			</div>
+{/block:Description}
+			<a href="/archive" id="archive-link">Archive</a>
+		</div>
+		<div id="content">
+{block:Posts}
+			<ul>
+{block:Photo}
+				<li class="post photo-post">
+					<div class="meta">
+						{block:Date}
+						<div class="date">
+							<div class="month">{ShortMonth}</div>
+							<div class="day">{DayOfMonth}</div>
+						</div>
+						{/block:Date}
+						<div class="share">
+							<p>Share This</p>
+							<a href="www.facebook.com/sharer.php?u={ShortURL}&amp;t={Title}">Post to Facebook</a>
+							<a href="http://twitter.com/?status={ShortURL} — {Title}">Post to Twitter</a>
+						</div>
+					</div>
+					<div class="photo"><img src="{PhotoURL-500}" alt="{PhotoAlt}"/></div>
+{block:Caption}
+					<div class="text">{Caption}</div>
+{/block:Caption}
+				</li>
+{/block:Photo}
+{block:Text}
+				<li class="post text-post">
+{block:Title}
+					<h2><a href="{Permalink}">{Title}</a></h2>
+{/block:Title}
+					<div class="meta">
+						{block:Date}
+						<div class="date">
+							<div class="month">{ShortMonth}</div>
+							<div class="day">{DayOfMonth}</div>
+						</div>
+						{/block:Date}
+						<div class="share">
+							<p>Share This</p>
+							<a href="www.facebook.com/sharer.php?u={ShortURL}&amp;t={Title}">Post to Facebook</a>
+							<a href="http://twitter.com/?status={ShortURL} — {Title}">Post to Twitter</a>
+						</div>
+					</div>
+					<p>These words are here to provide the <strong>reader with a basic impression</strong> of how actual text will appear in its final presentation. Think of them merely as actors on a paper stage, in a performance devoid of content yet rich in form and though. <a href="#">That being the case</a>, there is really no point in your continuing to read them. After all, you have many other things you should be doing. Who's paying you to waste this time, anyway?</p>
+					<p><blockquote>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. These words are here to provide.</blockquote></p>
+					<p>That being the case, there is really no point in your continuing to read them. After all, you have many other things you should be doing. Who's paying you to waste this time, anyway?</p>
+					<div class="photo"><img src="http://placehold.it/455x335"></div>
+				</li>
+{/block:Text}
+{block:Quote}
+				<li class="post quote-post">
+{block:Title}
+					<h2><a href="{Permalink}">{Title}</a></h2>
+{/block:Title}
+					<div class="meta">
+						{block:Date}
+						<div class="date">
+							<div class="month">{ShortMonth}</div>
+							<div class="day">{DayOfMonth}</div>
+						</div>
+						{/block:Date}
+						<div class="share">
+							<p>Share This</p>
+							<a href="www.facebook.com/sharer.php?u={ShortURL}&amp;t={Title}">Post to Facebook</a>
+							<a href="http://twitter.com/?status={ShortURL} — {Title}">Post to Twitter</a>
+						</div>
+					</div>
+					<p>{Quote}</p>
+{block:Source}
+					<p class="author">~ {Source}</p>
+{/block:Source}
+				</li>
+{/block:Quote}
+{block:Link}
+				<li class="post link-post">
+					<h2><a href="{URL}" {Target}>{Name}</a></h2>
+					<div class="meta">
+						{block:Date}
+						<div class="date">
+							<div class="month">{ShortMonth}</div>
+							<div class="day">{DayOfMonth}</div>
+						</div>
+						{/block:Date}
+						<div class="share">
+							<p>Share This</p>
+							<a href="www.facebook.com/sharer.php?u={ShortURL}&amp;t={Title}">Post to Facebook</a>
+							<a href="http://twitter.com/?status={ShortURL} — {Title}">Post to Twitter</a>
+						</div>
+					</div>
+{block:Description}
+					<div class="description">{Description}</div>
+{/block:Description}
+				</li>
+{/block:Link}
+{block:Video}
+				<li class="post video-post">
+{block:Title}
+					<h2><a href="{Permalink}">{Title}</a></h2>
+{/block:Title}
+					<div class="meta">
+						{block:Date}
+						<div class="date">
+							<div class="month">{ShortMonth}</div>
+							<div class="day">{DayOfMonth}</div>
+						</div>
+						{/block:Date}
+						<div class="share">
+							<p>Share This</p>
+							<a href="www.facebook.com/sharer.php?u={ShortURL}&amp;t={Title}">Post to Facebook</a>
+							<a href="http://twitter.com/?status={ShortURL} — {Title}">Post to Twitter</a>
+						</div>
+					</div>
+					<div class="video-container">{Video-500}</div>
+{block:Caption}
+					<div class="text">
+						{Caption}
+					</div>
+{/block:Caption}
+				</li>
+{/block:Video}
+{block:Chat}
+				<li class="post chat-post">
+{block:Title}
+					<h2><a href="{Permalink}">{Title}</a></h2>
+{/block:Title}
+					<div class="meta">
+						{block:Date}
+						<div class="date">
+							<div class="month">{ShortMonth}</div>
+							<div class="day">{DayOfMonth}</div>
+						</div>
+						{/block:Date}
+						<div class="share">
+							<p>Share This</p>
+							<a href="www.facebook.com/sharer.php?u={ShortURL}&amp;t={Title}">Post to Facebook</a>
+							<a href="http://twitter.com/?status={ShortURL} — {Title}">Post to Twitter</a>
+						</div>
+					</div>
+					<h2>Chat title if there is one</h2>
+					<table border="0">
+{block:Lines}
+						<tr class="{Alt} user_{UserNumber}">
+							<th>{block:Label}{Label}{/block:Label}</th>
+							<td>
+								{Line}
+							</td>
+						</tr>
+{/block:Lines}
+					</table>
+				</li>
+{/block:Chat}
+			</ul>
+{/block:Posts}
+		</div>
+		</div>
+<script>
+var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
+(function(d, t) {
+var g = d.createElement(t),
+s = d.getElementsByTagName(t)[0];
+g.async = true;
+g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g, s);
+})(document, 'script');
+</script>
+	</body>
+</html>
